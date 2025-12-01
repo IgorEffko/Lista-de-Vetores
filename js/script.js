@@ -15,6 +15,10 @@ function adicionar() {
     imprimir();  
 
     limpar();
+
+    setcursor();
+
+    
 }
 
 function getInput() {
@@ -36,4 +40,8 @@ function imprimir() {
 
 function limpar() {    
     document.getElementById('campo').value = '';
+}
+
+function setcursor() {
+    document.getElementById("campo").focus();
 }
