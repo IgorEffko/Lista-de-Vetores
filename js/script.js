@@ -2,6 +2,7 @@
 let vetor = [];
 console.log(vetor);
 
+const CAMPO = "campo";
 
 function adicionar() {
     let valor = getInput();
@@ -18,11 +19,13 @@ function adicionar() {
 
     setcursor();
 
+    imprimirnatela();
+
     
 }
 
 function getInput() {
-    return document.getElementById("campo").value;
+    return document.getElementById( CAMPO ).value;
 }
 
 function addvetor(valor) {
@@ -39,9 +42,18 @@ function imprimir() {
 }
 
 function limpar() {    
-    document.getElementById('campo').value = '';
+    document.getElementById( CAMPO ).value = '';
 }
 
 function setcursor() {
-    document.getElementById("campo").focus();
+    document.getElementById( CAMPO ).focus();
+}
+
+function imprimirnatela() {
+     const lista =  document.getElementById("lista");
+    console.log("===================================");
+    console,log("lista")
+    console.log("===================================");
+
+
 }
