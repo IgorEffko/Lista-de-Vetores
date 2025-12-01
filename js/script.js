@@ -5,14 +5,20 @@ console.log(vetor);
 
 function adicionar() {
     let valor = getInput();
+
     console.log(valor);
+
     addvetor(valor); 
+
     console.log(vetor); 
+
     imprimir();  
+
+    limpar();
 }
 
 function getInput() {
-    return document.getElementById("input").value;
+    return document.getElementById("campo").value;
 }
 
 function addvetor(valor) {
@@ -21,5 +27,13 @@ function addvetor(valor) {
 }
 
 function imprimir() {
-    document.getElementById("input").value = vetor[0];
+    console.log("Chamou o método imprimir");
+
+    const lista =  document.getElementById("lista");
+
+    lista.innerHTML = vetor[0];
+}
+
+function limpar() {    
+    document.getElementById('campo').value = '';
 }
